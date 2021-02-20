@@ -2,7 +2,7 @@ build:
 	DOCKER_BUILDKIT=1 docker build -t bynr/play-fastapi .
 
 run:
-	docker run -v app:/app -d -p 80:80 --name fast bynr/play-fastapi
+	docker run -v app:/app -d -p 80:80 --name fast bynr/play-fastapi /start-reload.sh
 
 follow:
 	docker logs -f fast
