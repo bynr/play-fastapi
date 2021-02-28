@@ -1,3 +1,4 @@
+.DEFAULT_GOAL := help
 MAKEFILE_PATH := $(shell dirname $(abspath $(lastword $(MAKEFILE_LIST))))
 PROJECT_ROOT := $(abspath $(MAKEFILE_PATH))
 
@@ -25,3 +26,6 @@ query:
 doc:
 	@echo "go to docs at http://127.0.0.1/docs"
 	@echo "go to docs at http://127.0.0.1/redoc"
+
+help:
+	cat $(MAKEFILE_PATH)/Makefile
